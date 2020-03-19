@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<style type="text/css">
+		.form-card {
+			position: absolute;
+			bottom: 28%;
+			left: 8%;
+			background: rgba(255,255,255,0.9);
+		}
+
+		body {
+               background-color: #fffae6;   
+               background-repeat: repeat;
+             }
+
+        .container {
+                   display: inline;
+                  }
+        .line{
+        	{
+      		width: 2px;
+            height: 30px;
+            background: #e68a00;
+            margin: 0 3px;
+            margin-top: 0px;
+            margin-top: 18px;
+
+      	}
+        }          
+	</style>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title>
+		Book Budget Hotels Online - Trip Bro
+	</title>
+
+</head>
+
+	<body>
+
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a href="http://localhost:10000" class="logo pull-left">
+      <img class="logo-click" src="./images/logo_1.png" alt="Online Travel Agency" title="Lowest Hotel Fairs in India">
+    </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/login/sign_in">Sign in</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="/register/sign_up">Sign up</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+      
+<div class="contain-car-frm">
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item">
+    <a href="/offer/Spring-Holiday-coming?device=pc" target="_blank" data-index="1">
+            <img src="https://img.happyeasygo.com/img/1582178302322.png" class="GAAD" ga="Banner-Spring holiday's coming" alt="...">
+        </a>
+    </div>
+    <div class="carousel-item active">
+        <a href="/offer/new-user-offer-feb?device=pc" target="_blank" data-index="2">
+            <img src="https://img.happyeasygo.com/img/1580713829748.jpg" class="GAAD" ga="Banner-NewUserOfferFeb" alt="...">
+          </a>
+    </div>
+    
+ </div>
+</div>
+     <div class="card form-card" style="width: 40%; margin: auto; padding: 2%;">
+    <form>
+      <div class="form-group">
+        <label for="cityname">Destination, Hotel</label><br>
+            <select class="" style="width: 80%; height: 2rem;">
+          <option>Delhi, India</option>
+          <option>Mumbai, India</option>
+      </select><br>
+
+        <label for="check-in">Check-In</label><br>
+        <input type="text" id="check-in" style="width: 80%;" class="cur_poi hasDatepicker"><br>
+
+          <label for="check-out">Check-Out</label><br>
+          <input type="text" id="check-out" style="width: 80%;" class="cur_poi hasDatepicker"><br>
+
+          <label for="room-guest">Rooms | guests</label><br>
+          <input type="text" id="room-guest" style="width: 80%;" class="cur_poi" value="1 Room, 2 Guests">
+          <!-- <i class="icon guest-icon"></i> -->
+          <!-- <i class="icon-down"></i>
+          <i class="icon-down"></i> --> 
+          <div class="search-result" style="display: none;">
+            <div class="search-result-container">
+              <div class="s-r-item" data-index="0">
+                <div class="room-result result-item">
+                  <span>Rooms 1</span>
+                  <div class="r-info">
+                    <span>2 Adults 0 Children</span>
+                    <span class="edit">edit</span>
+                  </div>
+                </div>
+                <div class="guests-result">
+                  <div class="adult-result result-item">
+                    <span>Adults （+12 yrs）</span>
+                    <div class="clearfix result-info">
+                      <em></em>
+                      <b>2</b>
+                      <i class="add" data-index="1"></i>
+                      <i class="minus" data-index="1"></i>
+                    </div>
+                  </div>
+                  <div class="child-result result-item">
+                    <span>Children （1-12 yrs）</span>
+                    <div class="clearfix result-info">
+                      <em></em>
+                      <b>0</b>
+                      <i class="add" data-index="2"></i>
+                      <i class="minus minus-disabled" data-index="2"></i>
+                    </div>
+                  </div>
+                  <ul class="child-age">
+                  </ul>
+                </div> 
+              </div>
+
+              <div class="room-operate">
+              <button class="add-room">ADD ROOM</button>
+              <span class="done">Done</span>
+            </div>
+          </div>
+        </div>
+        <div class=" get-set-go">
+          <button class="btn go pull-right GAEV" ga-category="LINK" ga-action="click" ga-label="HotelSearch" style="background-color: #ff6600; color: white; margin-top: 10px; margin-bottom: 10px;"><a href="/login/sign_in" style="text-decoration: none; color: white;">SEARCH</a></button>
+
+            </div>
+  		</div>
+  	</form>
+  </div>
+  </div>
+
+
+  <div class="tab-content">
+    
+    <div class="tab-pane h-selector active" id="hotelTab">
+      <div class="selector-container">
+        <div class="form-group cityname"> 
+          
+          <span class="icon-loading"></span>
+          <div class="search-result" style="display: none;">
+            <h2>SEARCH RESULTS</h2>
+            <div class="result-items">
+              
+            </div>
+          </div> 
+          <!-- <i class="icon room-icon"></i> -->
+        </div>
+        <div class="form-group check-in">
+          <input type="hidden" id="in-Date" name="departDate" placeholder="2020-02-24">
+          <!-- <i class="icon in-icon"></i> -->
+        </div>
+        <div class="form-group check-out">
+          <input type="hidden" id="out-Date" name="departDate" value="2020-02-25">
+          <!-- <i class="icon out-icon"></i> -->
+        </div>
+        <div class="form-group rooms-guest">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+  <div>
+    <h4 style="text-align: center;">Hot Destinations</h4>
+    <li style="list-style-type:none; text-align: center;"><a href="/location/delhi">Delhi</a></li>
+    <li style="list-style-type:none; text-align: center;"><a href="/location/mumbai">Mumbai</a></li>
+  </div>
+  <div class="coupon_Card">
+    <div class="container" style="position: relative;">
+      <div class="ad_box clearfix">
+        <img src="./images/Best_Price.JPG" style="margin: 40px;">
+        <img src="./images/Support.JPG" style="margin: 40px;">
+        
+      </div>
+      
+      
+  
+</div>
+<script id="couponBannerTpl" type="text/template">
+  {{if(myModel.length<=0){}}
+    <div class="no-list-content">
+      <img src="//img.happyeasygo.com/www/static/img/3b56fc308c4de8f7dc2bb8f2e1664a19.png" alt="">
+      <p>Amazing Coupons are coming soon</p>
+    </div>
+  {{ } else { }}
+  {{ _.each(myModel,function(val,i){ }}
+    <li class="swiper-slide" data-index="{{= i}}">
+      <a href="{{= val.href}}" target="_blank" class="GAAD"  ga="HomepageCoupon-{{=val.title}}">
+        <div class="item">
+          <div class="item-left">
+            <div class="js-coupon-img" style="position:relative;width:100px;height:100px">
+              <img class="item-left-img" src="{{= val.url}}" alt="">
+              {{ if(val.countDownDate){ }}
+                <span class="coupon-time js-coupon-time">{{= val.countDownDate}}</span>
+              {{ } }}
+            </div>
+            {{ if(val.businessType==1){ }}
+              <p class="coupon-type flight-color">
+                <span class="couponType">{{= val.couponTypeName }}</span>
+              </p>
+            {{ }else if(val.businessType==2){ }}
+              <p class="coupon-type hotel-color">
+                <span class="couponType">{{= val.couponTypeName }}</span>
+              </p>
+            {{ }else if(val.businessType==3){ }}
+              <p class="coupon-type flightHotel-color">
+                <span class="couponType">{{= val.couponTypeName }}</span>
+              </p>
+            {{ } }}
+          </div>
+          <div class="item-right">
+            <h2 class="title">{{=val.title}}</h2>
+            <p class="decredition">{{=val.alt}}</p>
+            <div class="book">BOOK NOW <i class="iconfont iconfuzhi"></i></div>
+          </div>
+        </div>
+      </a>
+    </li>
+  {{ })} }} 
+  
+</script>
+    </div>
+  </div>
+    
+  </div>
+  
+  
+</div>
+<div class="row" style="width: 80%; margin: auto; text-align: justify;">
+      <div class="col-12 col-md-6 px-0 mb-2 px-lg-2">
+        <div class="card mb-2 mb-lg-0 h-100">
+        <div class="card-header">Why TripBro?</div>
+        <div class="card-body">
+        <div class="card-text">
+          One of the leaders in the Indian travel industry, TripBro is the go-to platform for your travel needs. Find the best online hotel booking deals, and save money every time you hit the road for business or leisure. Visit the website to book on-the-go. Registration Reward, TB Coupon, exclusive coupons for and hotel discounts, user-friendly interface and secure payments channel will help you enjoy a seamless cheap hotels booking experience.
+          </div>
+      </div>
+      </div>
+      </div>
+
+      <div class="col-12 col-md-6 px-0 mb-2 px-lg-2">
+      <div class="card mb-2 mb-lg-0 h-100">
+        <div class="card-header">Hotel Booking with TripBro</div>
+          <div class="card-body">
+          <div class="card-text">
+          Stop spending hours on the internet, scouting the best hotel booking offer, and visit TripBro for guaranteed best prices for hotel rooms. From budget to luxury, choose the hotel category that suits you the best and pick your accommodation from an array of options. Whether you are going on an adventure trip or heading out on business, TripBro has the perfect hotel for you. So, what are you waiting for? Book now!
+          </div>
+      </div>
+      </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+
+</body>
+
+
+
+</html>

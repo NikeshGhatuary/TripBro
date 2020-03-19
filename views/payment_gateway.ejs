@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<style type="text/css">
+		form input {
+			margin: 10px;
+		}
+
+		form button{
+			margin: 10px;
+		}
+		.panel {
+			padding: 25px;
+		}
+	</style>
+
+	<title>TripBro Payment Gateway</title>
+	<link rel="stylesheet" type="text/css" href="/css/payment_gateway.css">
+</head>
+
+<body>
+
+	<div class="container" style="background-color: white;">
+	 <div class="row">
+	<!-- You can make it whatever width you want. I'm making it full width
+	on <= small devices and 4/12 page width on >= medium devices -->
+	  <div class="col-xs-12 col-md-4">
+
+
+	<!-- CREDIT CARD FORM STARTS HERE -->
+	  <div class="panel panel-default credit-card-box">
+	   <div class="panel-heading display-table">
+	    <div class="row display-tr" >
+			<h3 class="panel-title display-td" style="font-size: 20px;margin-left: 10px;">Payment Details</h3>
+			<div class="display-td" >                            
+			<img class="img-responsive pull-right" src="http://i76.imgup.net/accepted_c22e0.png">
+	    </div>
+	   </div>                    
+	  </div>
+	<div class="panel-body">
+	<form role="form" id="payment-form">
+	<div class="row">
+	<div class="col-xs-12">
+	<div class="form-group">
+	<label for="cardNumber" style="font-weight: bold;">CARD NUMBER</label>
+	<div class="input-group">
+	<input 
+	type="tel"
+	class="form-control"
+	name="cardNumber"
+	maxlength="16" 
+	placeholder="Valid Card Number"
+	autocomplete="cc-number"
+	required autofocus 
+	/>
+	<span class="input-group-addon"><i class="fa fa-credit-card"></i></span>
+	</div>
+	</div>                            
+	</div>
+	</div>
+	<div class="row">
+	<div class="col-xs-7 col-md-7">
+	<div class="form-group">
+	<label for="cardExpiry"  style="font-weight: bold;"><span class="hidden-xs">EXPIRATION</span><span class="visible-xs-inline">EXP</span> DATE</label>
+	<input 
+	type="tel" 
+	class="form-control floatLabel" 
+	name="cardExpiry"
+	maxlength="5"
+	placeholder="MM / YY"
+	autocomplete="cc-exp"
+	required 
+	/>
+	</div>
+	</div>
+	<div class="col-xs-5 col-md-5 pull-right">
+	<div class="form-group">
+	<label for="cardCVC" style="font-weight: bold;">CV CODE</label>
+	<input 
+	type="tel" 
+	class="form-control floatLabel"
+	name="cardCVC"
+	maxlength="3"
+	placeholder="CVC"
+	autocomplete="cc-csc"
+	required
+	/>
+	</div>
+	</div>
+	</div>
+	
+	<div class="row">
+	<div class="col-xs-12">
+	<button class="btn btn-success" type="submit" formaction="/thankyou/thankyou" style="background-color: #ff6600; color: white; font-size: 15px;">PAY</button>
+
+	</div>
+	</div>
+	<div class="row" style="display:none;">
+	<div class="col-xs-12">
+	<p class="payment-errors"></p>
+	</div>
+	</div>
+	</form>
+	</div>
+	</div>            
+	<!-- CREDIT CARD FORM ENDS HERE -->
+
+
+	</div>            
+
+
+	</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			  crossorigin="anonymous"></script>
+<script src="/js/register.js"></script>
+		
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TripBro Sign Up</title>
+	<link rel="stylesheet" type="text/css" href="/css/register.css">
+</head>
+<body>
+
+     <form action="/api/users/signup" method="post">
+      <h2>Sign Up</h2>
+		<p>
+			<label for="email" class="floatLabel">Email</label>
+			<input id="email" name="email" type="text">
+		</p>
+		<p>
+			<label for="password" class="floatLabel">Password</label>
+			<input id="password" name="password" type="password">
+			<span>Enter a password longer than 8 characters</span>
+		</p>
+		<p>
+			<label for="confirm_password" class="floatLabel">Confirm Password</label>
+			<input id="confirm_password" name="confirm_password" type="password">
+			<span>Your passwords do not match</span>
+		</p>
+		<p>
+			<!-- <input act type="submit" value="Create My Account" id="submit" style="background-color: #ffb84d"> -->
+			<button class="btn btn-success" type="submit" style="margin-left: 22%; border-radius: 5px; background-color: #ffb84d; color: white; font-size: 25px;"><a href="http://localhost:10000" style="text-decoration: none; color: white;">Create My Account</a></button>
+
+		</p>
+	</form>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			  crossorigin="anonymous"></script>
+<script src="js/register.js"></script>
+
+
+</body>
+</html>
