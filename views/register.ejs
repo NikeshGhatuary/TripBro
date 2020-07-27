@@ -5,29 +5,66 @@
 	<link rel="stylesheet" type="text/css" href="/css/register.css">
 </head>
 <body>
-
-     <form action="/api/users/signup" method="post">
+     <form id="signup_form">
       <h2>Sign Up</h2>
 		<p>
 			<label for="email" class="floatLabel">Email</label>
-			<input id="email" name="email" type="text">
+			<input id="email" name="email" required placeholder = "Email ID" type="text">
 		</p>
 		<p>
 			<label for="password" class="floatLabel">Password</label>
-			<input id="password" name="password" type="password">
+			<input id="password" name="password" required placeholder = "Password" type="password">
 			<span>Enter a password longer than 8 characters</span>
 		</p>
 		<p>
 			<label for="confirm_password" class="floatLabel">Confirm Password</label>
-			<input id="confirm_password" name="confirm_password" type="password">
+			<input id="confirm_password" name="confirm_password" required placeholder = "Confirm password" type="password"> 
 			<span>Your passwords do not match</span>
 		</p>
 		<p>
-			<!-- <input act type="submit" value="Create My Account" id="submit" style="background-color: #ffb84d"> -->
-			<button class="btn btn-success" type="submit" style="margin-left: 22%; border-radius: 5px; background-color: #ffb84d; color: white; font-size: 25px;"><a href="http://localhost:10000" style="text-decoration: none; color: white;">Create My Account</a></button>
+			<button class="btn btn-success" type="submit" style="margin-left: 22%; border-radius: 5px; background-color: #ffb84d; color: white; font-size: 25px;">Create My Account</button>
 
 		</p>
 	</form>
+
+<script>
+	const signup_form = document.getElementById('signup_form');
+
+	signup_form.addEventListener('submit', function(e){
+		e.preventDefault();
+
+		const formData = new FormData(this);
+        const data= 
+        { "email": document.getElementById("email").value,
+          "password": document.getElementById("password").value,
+          "confirm_password": document.getElementById("confirm_password").value 
+        }
+        console.log(data);
+        //console.log("Logged successfully!");
+		fetch('http://localhost:10000/api/users/signup', {
+			method: 'POST',
+			headers: {
+             'Content-Type': 'application/json'
+            // 'Content-Type': 'application/x-www-form-urlencoded',
+    		},
+    		
+    		body: JSON.stringify(data) // body data type must match "Content-Type" header
+		}).then(function (response){
+		    return response.json();
+			
+		}).then(function (text){
+			console.log(text);
+			var user = text;
+			sessionStorage.setItem("chosen", user);
+			window.location.replace("/");
+
+		}).catch(function (error){
+		
+		})
+        
+	});
+
+</script>	
 
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"
