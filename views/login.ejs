@@ -6,23 +6,56 @@
 </head>
 <body>
 
-     <form action="#" method="post">
+     <form id="signin_form">
       <h2>Sign In</h2>
 		<p>
-			<label for="Email" class="floatLabel">Email</label>
-			<input id="Email" name="Email" type="text">
+			<label for="email" class="floatLabel">Email</label>
+			<input id="email" name="email" required placeholder = "Email ID" type="text">
 		</p>
 		<p>
 			<label for="password" class="floatLabel">Password</label>
-			<input id="password" name="password" type="password">
+			<input id="password" name="password" required placeholder = "Password" type="password">
 		</p>
 		<p>
-			<button class="btn btn-success" type="submit" style="margin-left: 40%; border-radius: 5px; background-color: #ffb84d; color: white; font-size: 25px;"><a href="http://localhost:10000" style="text-decoration: none; color: white;">Log In</a></button>
+			<button class="btn btn-success" type="submit" style="margin-left: 40%; border-radius: 5px; background-color: #ffb84d; color: white; font-size: 25px;">Log In</button>
 		</p>
 		<a href="/register/sign_up" style="font-size: 14px; position: center;">Register here</a>
 	</form>
 
+<script>
+	const signin_form = document.getElementById('signin_form');
 
+	signin_form.addEventListener('submit', function(e){
+		e.preventDefault();
+
+		const fData = new FormData(this);
+        const data= 
+        {  "email": document.getElementById("email").value,
+           "password": document.getElementById("password").value   
+        }
+        console.log(data);
+        //console.log("Logged successfully!")
+		fetch('http://localhost:10000/api/users/signin', {
+			method: 'POST',
+			headers: {
+             'Content-Type': 'application/json'
+    		},
+    		
+    		body: JSON.stringify(data) // body data type must match "Content-Type" header
+		}).then(function (response){
+			return response.json();
+
+		}).then(function (text){
+			console.log(text);
+
+		}).catch(function (error){
+			console.error('Not logged in!');
+		})
+        
+        window.location.replace("/");
+        
+	});
+</script>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"
 			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
 			  crossorigin="anonymous"></script>
