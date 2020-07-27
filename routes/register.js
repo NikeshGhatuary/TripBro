@@ -5,6 +5,7 @@ router.get('/sign_up', async (req, res) => {
   res.render('register');
 });
 
-module.exports = router; 
 
 
+
+module.exports = router;
